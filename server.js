@@ -106,7 +106,7 @@ app.set('views', __dirname + '/views');
 // getProviders is the name of the variable that holds the results from the query
 // - localhost:3000/get-providers -link to view in browser
 app.get('/get-providers', (req, res) => {
-    const getProviders = "SELECT * FROM providers WHERE provider_specialty='Cardiology' "
+    const getProviders = "SELECT * FROM providers WHERE provider_specialty='?' "
     db.query(getProviders, (err, data) => {
         // if I have an error 
         if(err) {
