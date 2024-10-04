@@ -85,7 +85,7 @@ app.set('views', __dirname + '/views');
 app.get('/patientsbyFname', (req,res) => {
 
     // Retrieve patients data from database Filtered by First Name
-    const patientsbyFname = 'SELECT * FROM patients ORDER BY first_name'
+    const patientsbyFname = "SELECT * FROM patients WHERE first_name='?'"
     db.query(patientsbyFname, (err, results) =>{
         if (err){
             console.error(err);
